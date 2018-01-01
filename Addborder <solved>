@@ -1,15 +1,13 @@
 function addBorder(picture) {
     
     var borderLen= picture[0].length +2;
-    
     var wall="";
 
 for (var i=0; i<borderLen; i++){
     
     wall=wall.concat("*");  //creates wall for top and bottom
+    }
     
-    
-}
     picture.unshift(wall); //makes top wall
     picture.push(wall); //makes bottom wall
     
