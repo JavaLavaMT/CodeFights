@@ -1,0 +1,27 @@
+function addBorder(picture) {
+    
+    var borderLen= picture[0].length +2;
+    
+    var wall="";
+
+for (var i=0; i<borderLen; i++){
+    
+    wall=wall.concat("*");  //creates wall for top and bottom
+    
+    
+}
+    picture.unshift(wall); //makes top wall
+    picture.push(wall); //makes bottom wall
+    
+       //loop for adding * to the front and the back of the array
+    for (var j=1; j<picture.length-1; j++){    
+         //  ^ j starts at one becuse 0 is the top of the wall 
+        picture[j]="*".concat(picture[j],"*");
+        //wall           //wall
+        //picture   now  //*picture*
+        //wall           //wall
+    }
+    
+    return picture;
+}
+
